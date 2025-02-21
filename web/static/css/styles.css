@@ -1,0 +1,18 @@
+body {
+    background-image: url('/static/images/background.jpg');
+    background-size: cover;
+}
+/* 移除下划线并定义链接颜色 */
+a {
+    color: blue; /* 自定义链接颜色 */
+    font-size: 18px; /* 自定义字体大小 */
+}
+.dark-green {
+    color: rgb(0, 100, 0); /* 暗绿色 */
+}
+.blue-text {
+    color: rgb(151, 51, 98);
+}
+.dark-purple {
+    color: rgb(75, 0, 130); /* 暗紫色 */
+}

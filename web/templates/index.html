@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>首頁</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  </head>
+  <body>
+		<!-- 在JavaScript中設置一個變量以包含警報消息 -->
+		<script>
+			var successMessage = "{{ success_message|e }}"; // 使用 |e 过滤器以确保安全性
+			if (successMessage) {
+				alert(successMessage);
+			}
+		</script>
+
+		<!-- 使用 <marquee> 元素创建跑马灯 
+		<marquee behavior="scroll" direction="left">
+			歡迎蒞臨本網站~
+		</marquee>-->
+		<div>
+			<form action="upload" method="post" enctype="multipart/form-data">  
+				<h2>上傳欲全同態加密檔案
+				<input type="file" multiple="" name="file" multiple>
+				<input type="submit" value="上傳"></h2>
+			</form>
+			<p><h2>下載序列化後的加密檔案
+			<a href="/download_txt" >下載檔案</a>&nbsp;&nbsp;
+			<a href="/download_secret" >私鑰下載</a></h2>
+			<hr>
+			<tr>
+		</div>
+		<div class="dark-green">
+			<form action="hiding" method="post" enctype="multipart/form-data">  
+				<h2>上傳欲藏入機密之檔案
+				<input type="file" multiple="" name="file" multiple></h2>
+				<h2>上傳機密檔案
+				<input type="file" multiple="" name="file" multiple>
+				<input type="submit" value="上傳"></h2>
+			</form>
+			<p><h2>下載藏入機密之檔案
+			<a href="/download_hiding_txt" >下載檔案</a></h2>
+			<hr>
+			<tr>
+		</div>
+		<div class="blue-text">
+			<form action="hiding_reduction" method="post" enctype="multipart/form-data">  
+				<h2>上傳欲還原的序列化檔案
+				<input type="file" multiple="" name="file" multiple>
+				<input type="submit" value="上傳"></h2>
+			</form>
+			<p><h2>下載還原的序列化檔案
+			<a href="/download_txt_reduction" >下載檔案</a>&nbsp;&nbsp;
+			<a href="/download_secret_data" >下載機密檔案</a></h2>
+			<hr>
+			<tr>
+		</div>
+		<div class="dark-purple">
+			<form action="decrypte" method="post" enctype="multipart/form-data">
+				<h2>上傳欲解密之序列化檔案
+				<input type="file" multiple="" name="file" multiple></h2>
+				<h2>上傳私鑰
+				<input type="file" multiple="" name="file" multiple>
+				<input type="submit" value="上傳"></h2>
+			</form>
+			<p><h2>下載原始檔案
+			<a href="/download_file" >下載檔案</a></h2>
+			<hr>
+			<tr>
+		</div>
+
+
+  </body>
+
+</html>
